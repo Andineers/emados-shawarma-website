@@ -1,68 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/output.css">
-   <!--~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~-->
-   <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <!--~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~-->
+    <link
+      rel="shortcut icon"
+      href="/assets/img/favicon.png"
+      type="image/x-icon"
+    />
 
-   <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
-   <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-     crossorigin="anonymous"
-     referrerpolicy="no-referrer"
-   />
+    <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-   <!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
-   <link
-     href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-     rel="stylesheet"
-   />
+    <!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
-   <!--  Swiper's CSS -->
-   <link
-   rel="stylesheet"
-   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
- />
+    <!--  Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <title>Richeese</title>
-</head>
-<body>
-   
-
+  </head>
+  <body>
     <header class="bg-primary fixed top-0 left-0 w-full z-50">
-        <nav class="container relative h-14 flex justify-between items-center">
-            <div>
-                <a href="#" class="text-2xl uppercase">
-                    bur <span>ger</span>
-                </a>
-            </div>
+      <nav class="container relative h-14 flex justify-between items-center">
+        <div>
+          <a href="#" class="text-2xl uppercase">
+            bur <span class="text-secondary font-serif">ger</span>
+          </a>
+        </div>
 
-            <div>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#review">Review</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+        <div
+          class="hidden absolute top-0 left-0 w-full py-14 bg-blue-800 border-b border-secondary md:block md:static md:py-0 md:border-none md:w-auto md:ml-auto"
+          id="nav-menu"
+        >
+          <ul class="flex flex-col text-center gap-5 md:flex-row">
+            <li>
+              <a href="#home" class="nav__link hover:text-secondary ease-in duration-200"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="nav_link hover:text-secondary ease-in duration-200"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#menu" class="nav_link hover:text-secondary ease-in duration-200"
+                >Menu</a
+              >
+            </li>
+            <li>
+              <a
+                href="#review"
+                class="nav_link hover:text-secondary ease-in duration-200"
+                >Review</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="nav_link hover:text-secondary ease-in duration-200"
+                >Contact</a
+              >
+            </li>
+          </ul>
 
-                <div>
-                    <i class="ri-close-line"></i>
-                </div>
-            </div>
+          <div
+            class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer md:hidden"
+            id="nav-close"
+          >
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
 
-            <div>
-                <i class="ri-moon-line"></i>
-                <div>
-                    <i class="ri-menu-2-line"></i>
-                </div>
-            </div>
-        </nav>
+        <div class="flex items-center gap-5">
+          <i class="ri-moon-line cursor-pointer ml-4 text-xl"></i>
+          
+          <div id="hamburger">
+            <i class="ri-menu-2-line cursor-pointer text-xl"></i>
+          </div>
+        </div>
+      </nav>
     </header>
-   
-    
-</body>
+
+    <script src="main.js"></script>
+  </body>
 </html>
