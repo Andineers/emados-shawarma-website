@@ -25,18 +25,28 @@
 
 @layer utilities {
     .home_title,
-    .card_title {
+    .card_title,
+    .section_title {
         @apply text-4xl font-[Poppins] font-bold uppercase lg:text-6xl;
     }
     .card_title {
         @apply text-xl;
     }
 
-    .separator {
+    .section_title {
+        @apply text-3xl;
+    }
+
+    .description {
         @apply w-28 h-[2px] bg-secondary my-5;
     }
 
     .paragraph {
         @apply text-cyan-50 text-xs leading-5;
     }
+}
+
+.tabs_wrap ul li:hover,
+.tabs_wrap ul li.active {
+    @apply bg-secondary text-black;
 }
