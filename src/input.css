@@ -5,6 +5,9 @@
 @tailwind utilities;
 
 @layer {
+    html {
+        @apply scroll-smooth;
+    }
     body {
         @apply text-white bg-primary tracking-wider font-[Poppins];
     }
