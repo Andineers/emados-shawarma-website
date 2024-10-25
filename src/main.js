@@ -63,15 +63,31 @@ tabs.forEach(tab => {
 
 })
 
-const scrollUp = () => {
-    const scrollUp = document.querySelector('scroll-up');
+const scrollUpBtn = document.querySelector('#scroll-up');
 
-    if(this.scrollY >= 250) {
-        scrollUpBtn.classList.remove("-bottom-1/2");
-        scrollUpBtn.classList.add("bottom-4");
-    } else {
-        scrollUpBtn.classList.add("-bottom-1/2");
-        scrollUpBtn.classList.remove("bottom-4");
-    }
+const scrollUp = () => {
+  // Cek scrollY
+  if (window.scrollY >= 250) {
+    scrollUpBtn.classList.remove("-bottom-1/2");
+    scrollUpBtn.classList.add("bottom-4");
+  } else {
+    scrollUpBtn.classList.add("-bottom-1/2");
+    scrollUpBtn.classList.remove("bottom-4");
+  }
+};
+
+// Event listener saat scroll
+window.addEventListener('scroll', scrollUp);
+
+
+// CHANGE BACKGROUND HEADER
+const scrollHeader = () => {
+const header = document.getElementById("#header");
+
+if(this.scrollY >= 50) {
+    header.classList.add("border-b", "border-secondary");
+}else {
+    header.classList.remove("border-b", "border-secondary");
+  }
 }
-window.addEventListener('scroll', scrollUp)
+window.addEventListener('scroll', scrollHeader)
