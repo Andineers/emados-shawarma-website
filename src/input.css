@@ -9,8 +9,9 @@
         @apply scroll-smooth;
     }
     body {
-        @apply text-white bg-primary tracking-wider font-[Poppins];
+        @apply text-white bg-primary tracking-wider font-[Poppins] dark:bg-black;
     }
+
 
     section {
         @apply pt-16 pb-4 md:pt-20;

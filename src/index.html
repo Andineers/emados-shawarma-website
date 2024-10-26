@@ -35,73 +35,34 @@
     <title>Emado's Shawarma</title>
   </head>
   <body>
-    <header class="bg-primary fixed top-0 left-0 w-full z-50">
+    <header class="bg-primary dark:bg-black fixed top-0 left-0 w-full z-50">
       <nav class="container relative h-14 flex justify-between items-center">
-        <div>
-          <a href="#" class="text-2xl uppercase font-[Poppins]">
-            Emado's <span class="text-secondary font-[Poppins]">Shawarma</span>
-          </a>
-        </div>
-
-        <div
-          class="hidden absolute top-0 left-0 w-full py-14 bg-blue-800 border-b border-secondary md:block md:static md:py-0 md:border-none md:w-auto md:ml-auto"
-          id="nav-menu"
-        >
-          <ul class="flex flex-col text-center gap-5 md:flex-row">
-            <li>
-              <a
-                href="#home"
-                class="nav__link hover:text-secondary ease-in duration-200"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#about"
-                class="nav_link hover:text-secondary ease-in duration-200"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="#menu"
-                class="nav_link hover:text-secondary ease-in duration-200"
-                >Menu</a
-              >
-            </li>
-            <li>
-              <a
-                href="#review"
-                class="nav_link hover:text-secondary ease-in duration-200"
-                >Review</a
-              >
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="nav_link hover:text-secondary ease-in duration-200"
-                >Contact</a
-              >
-            </li>
-          </ul>
-
-          <div
-            class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer md:hidden"
-            id="nav-close"
-          >
-            <i class="ri-close-line"></i>
+          <div>
+              <a href="#" class="text-2xl uppercase font-[Poppins]">
+                  Emado's <span class="text-secondary font-[Poppins]">Shawarma</span>
+              </a>
           </div>
-        </div>
-
-        <div class="flex items-center gap-5">
-          <i class="ri-moon-line cursor-pointer ml-4 text-xl"></i>
-
-          <div class="md:hidden" id="hamburger">
-            <i class="ri-menu-2-line cursor-pointer text-xl"></i>
+          <div class="hidden absolute top-0 left-0 w-full py-14 bg-blue-800 border-b border-secondary md:block md:static md:py-0 md:border-none md:w-auto md:ml-auto" id="nav-menu">
+              <ul class="flex flex-col text-center gap-5 md:flex-row">
+                  <li><a href="#home" class="nav__link hover:text-secondary ease-in duration-200">Home</a></li>
+                  <li><a href="#about" class="nav_link hover:text-secondary ease-in duration-200">About</a></li>
+                  <li><a href="#menu" class="nav_link hover:text-secondary ease-in duration-200">Menu</a></li>
+                  <li><a href="#review" class="nav_link hover:text-secondary ease-in duration-200">Review</a></li>
+                  <li><a href="#contact" class="nav_link hover:text-secondary ease-in duration-200">Contact</a></li>
+              </ul>
+              <div class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer md:hidden" id="nav-close">
+                  <i class="ri-close-line"></i>
+              </div>
           </div>
-        </div>
+          <div class="flex items-center gap-5">
+              <i class="ri-moon-line cursor-pointer ml-4 text-xl" id="theme-toggle"></i>
+              <div class="md:hidden" id="hamburger">
+                  <i class="ri-menu-2-line cursor-pointer text-xl"></i>
+              </div>
+          </div>
       </nav>
-    </header>
+  </header>
+  
 
     <main>
       <section id="home">
@@ -226,7 +187,7 @@
         <div class="container flex flex-col gap-5 lg:gap-10 lg:flex-row">
           <!-- card 1 -->
           <div
-            class="bg-primaryColorLight flex flex-col p-5 rounded-lg md:flex-row md:items-center lg:flex-row-reverse lg:flex-1"
+            class="bg-primaryColorLight dark:bg-darkPrimaryLight flex flex-col p-5 rounded-lg md:flex-row md:items-center lg:flex-row-reverse lg:flex-1"
           >
             <img
               src="/Assets/img/promo-1.png"
@@ -246,7 +207,7 @@
 
           <!-- card 2 -->
           <div
-            class="bg-primaryColorLight flex flex-col p-5 rounded-lg lg:flex-row-reverse lg:flex-1"
+            class="bg-primaryColorLight dark:bg-darkPrimaryLight flex flex-col p-5 rounded-lg lg:flex-row-reverse lg:flex-1"
           >
             <img
               src="/Assets/img/promo-2.png"
@@ -323,11 +284,11 @@
                 <li data-tabs="all" class="btn bg-primaryColorLight active">
                   All
                 </li>
-                <li data-tabs="food" class="btn bg-primaryColorLight">Food</li>
-                <li data-tabs="snack" class="btn bg-primaryColorLight">
+                <li data-tabs="food" class="btn bg-primaryColorLight dark:bg-darkPrimaryLight">Food</li>
+                <li data-tabs="snack" class="btn bg-primaryColorLight dark:bg-darkPrimaryLight">
                   Snack
                 </li>
-                <li data-tabs="beverage" class="btn bg-primaryColorLight">
+                <li data-tabs="beverage" class="btn bg-primaryColorLight dark:bg-darkPrimaryLight">
                   Beverage
                 </li>
               </ul>
@@ -341,7 +302,7 @@
               <!-- food -->
               <li class="item_wrap food">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/burger-1.png"
@@ -364,7 +325,7 @@
 
               <li class="item_wrap food">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/burger-2.png"
@@ -387,7 +348,7 @@
 
               <li class="item_wrap food">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/burger-3.png"
@@ -410,7 +371,7 @@
 
               <li class="item_wrap food">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/burger-4.png"
@@ -433,7 +394,7 @@
 
               <li class="item_wrap food">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/burger-5.png"
@@ -456,7 +417,7 @@
 
               <li class="item_wrap food">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/burger-6.png"
@@ -480,7 +441,7 @@
               <!-- snack -->
               <li class="item_wrap snack">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/snack-1.png"
@@ -503,7 +464,7 @@
 
               <li class="item_wrap snack">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/snack-2.png"
@@ -526,7 +487,7 @@
 
               <li class="item_wrap snack">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/snack-3.png"
@@ -549,7 +510,7 @@
 
               <li class="item_wrap snack">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/snack-4.png"
@@ -572,7 +533,7 @@
 
               <li class="item_wrap snack">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/snack-5.png"
@@ -595,7 +556,7 @@
 
               <li class="item_wrap snack">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/snack-6.png"
@@ -619,7 +580,7 @@
               <!-- beverage -->
               <li class="item_wrap beverage">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/beverage-1.png"
@@ -642,7 +603,7 @@
 
               <li class="item_wrap beverage">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/beverage-2.png"
@@ -665,7 +626,7 @@
 
               <li class="item_wrap beverage">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/beverage-3.png"
@@ -688,7 +649,7 @@
 
               <li class="item_wrap beverage">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/beverage-4.png"
@@ -711,7 +672,7 @@
 
               <li class="item_wrap beverage">
                 <div
-                  class="h-56 grid place-items-center bg-primaryColorLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
+                  class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkPrimaryLight rounded-3xl hover:bg-secondary ease-linear duration-200 lg:h-40"
                 >
                   <img
                     src="/Assets/img/beverage-5.png"
@@ -751,7 +712,7 @@
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
-              <div class="swiper-slide bg-primaryColorLight rounded-lg p-8">
+              <div class="swiper-slide bg-primaryColorLight dark:bg-darkPrimaryLight rounded-lg p-8">
                 <p class="text-gray-300 mb-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore.
@@ -773,7 +734,7 @@
               </div>
 
               <!-- Slide 2 -->
-              <div class="swiper-slide bg-primaryColorLight rounded-lg p-8">
+              <div class="swiper-slide bg-primaryColorLight dark:bg-darkPrimaryLight rounded-lg p-8">
                 <p class="text-gray-300 mb-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore.
@@ -795,7 +756,7 @@
               </div>
 
               <!-- Slide 3 -->
-              <div class="swiper-slide bg-primaryColorLight rounded-lg p-8">
+              <div class="swiper-slide bg-primaryColorLight dark:bg-darkPrimaryLight rounded-lg p-8">
                 <p class="text-gray-300 mb-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore.
@@ -903,7 +864,7 @@
             </li>
           </ul>
 
-          <div class="flex flex-col items-center border-t border-primaryColorLight py-5 md:flex-row md:justify-between">
+          <div class="flex flex-col items-center border-t border-primaryColorLight dark:bg-darkPrimaryLight py-5 md:flex-row md:justify-between">
             <p class="paragraph">Emado's Shawarma by Rizky Andini</p>
             <p class="paragraph">Copyrigth 2024. All rigths reserved.</p>
           </div>
@@ -915,8 +876,7 @@
 
     <a href="#" id="scroll-up" class="fixed right-4 -bottom-1/2 bg-secondary shadow-sm inline-block px-4 py-2 rounded-full text-lg text-black z-50 hover:-translate-y-1 ease-in duration-200">
       <i class="fa-solid fa-arrow-up"></i>
-  </a>
-  
+  </a>  
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 

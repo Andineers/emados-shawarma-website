@@ -63,6 +63,37 @@ tabs.forEach(tab => {
 
 })
 
+
+// DARK LIGHT MODE
+const html = document.querySelector('html');
+const themeBtn = document.getElementById('theme-toggle');
+
+// Muat mode tema dari localStorage saat halaman dimuat
+window.addEventListener('DOMContentLoaded', (e) => {
+    const savedMode = localStorage.getItem('mode');
+    if (savedMode === 'dark') {
+        html.classList.add('dark');
+        themeBtn.classList.replace('ri-moon-line', 'ri-sun-line');
+    } else {
+        html.classList.remove('dark');
+        themeBtn.classList.replace('ri-sun-line', 'ri-moon-line');
+    }
+});
+
+themeBtn.addEventListener('click', (e) => {
+    html.classList.toggle('dark');
+    if (html.classList.contains('dark')) {
+        themeBtn.classList.replace('ri-moon-line', 'ri-sun-line');
+        localStorage.setItem('mode', 'dark');
+    } else {
+        themeBtn.classList.replace('ri-sun-line', 'ri-moon-line');
+        localStorage.setItem('mode', 'light');
+    }
+});
+
+
+
+
 const scrollUpBtn = document.querySelector('#scroll-up');
 
 const scrollUp = () => {
@@ -91,3 +122,10 @@ if(this.scrollY >= 50) {
   }
 }
 window.addEventListener('scroll', scrollHeader)
+
+
+// ACTIVE LINK
+const activeLink = () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links li a');
+}

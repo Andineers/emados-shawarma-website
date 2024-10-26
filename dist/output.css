@@ -1176,6 +1176,11 @@ video {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
+  body:is(.dark *){
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  }
+
   section{
     padding-top: 4rem;
     padding-bottom: 1rem;
@@ -1229,6 +1234,16 @@ video {
 
 .hover\:opacity-75:hover{
   opacity: 0.75;
+}
+
+.dark\:bg-black:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-darkPrimaryLight:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 29 29 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px){
