@@ -125,7 +125,73 @@ window.addEventListener('scroll', scrollHeader)
 
 
 // ACTIVE LINK
+// JavaScript untuk menandai tautan aktif saat halaman di-scroll
+// JavaScript untuk menandai tautan aktif
 const activeLink = () => {
     const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links li a');
-}
+    const navLinks = document.querySelectorAll('.nav__link');
+
+    let current = "home"; // Default ke "home"
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        // Cek jika scrollY berada dalam rentang section ini
+        if (window.scrollY >= sectionTop - 60 && window.scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach((link) => {
+        // Hapus kelas text-secondary dari semua tautan
+        link.classList.remove("text-secondary");
+        
+        // Tambahkan kelas text-secondary pada tautan yang aktif
+        if (link.getAttribute("href").includes(current)) {
+            link.classList.add("text-secondary");
+        }
+    });
+};
+
+// Tambahkan event listener untuk scroll
+window.addEventListener('scroll', activeLink);
+
+// Menjaga tautan aktif saat diklik
+document.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        // Hapus kelas text-secondary dari semua tautan
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.classList.remove('text-secondary');
+            link.classList.add('text-white'); // Set semua ke text-white
+        });
+
+        // Tambahkan kelas text-secondary pada tautan yang diklik
+        e.target.classList.add('text-secondary');
+    });
+});
+
+// Tambahkan event listener untuk memanggil activeLink saat halaman di-scroll
+window.addEventListener('scroll', activeLink);
+
+// SCROLL REVEAL ANIMATION
+document.addEventListener('DOMContentLoaded', () => {
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '80px',
+        duration: 2500,
+        delay: 400
+    });
+
+    sr.reveal('.home_image');
+    sr.reveal('.home_content', { origin: 'bottom' });
+    sr.reveal('.category_card', { interval: 300});
+    sr.reveal('.promo_card-1', { origin: 'left'});
+    sr.reveal('.promo_card-2', { origin: 'right'});
+    sr.reveal('.about_image', { origin: 'bottom'});
+    sr.reveal('.about_content', { origin: 'top'});
+    sr.reveal('.menu_items', { origin: 'left'});
+    sr.reveal('.customer_review', { origin: 'right'});
+    sr.reveal('.footer');
+});
+
